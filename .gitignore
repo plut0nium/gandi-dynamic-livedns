@@ -1,0 +1,6 @@
+# config file
+gandi.cfg
+
+# python
+__pycache__/
+*.py[cod]
