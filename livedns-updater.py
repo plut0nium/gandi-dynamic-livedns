@@ -30,6 +30,7 @@ from configparser import ConfigParser
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 import logging
+import socket
 
 # TODO: move to config file
 URL_IP_EXTERNAL = [
@@ -41,7 +42,7 @@ def get_external_ip(url_list, index=0):
     """ get the external IP address by querying web providers """
     try:
         response = urlopen(url_list[index], None, 3)
-    except URLError as e:
+    except (URLError, socket.timeout) as e:
         #on error, try the next url
         ip = get_external_ip(url_list, index + 1)
     else:
