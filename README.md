@@ -1,4 +1,4 @@
-# gandilf.py - Gandi LiveDNS Updater :snake:
+# livedns-updater.py - Gandi LiveDNS Updater :snake:
 
 This python script allows the user to dynamically update a list of DNS records hosted by http://www.gandi.net.
 
@@ -8,11 +8,11 @@ The objective is to reproduce a dynamic DNS functionality, using Gandi’s newes
 
 Just clone the repository (or copy the script) and edit the config file.
 
-Then run `gandilf.py –c your_config.cfg`
+Then run `livedns-updater.py –c your_config.cfg`
 
 The script can be run at regular interval by adding it to your crontab:
 ```
-*/15 * * * * python /path/to/gandilf.py -c your_config.cfg
+*/15 * * * * python /path/to/livedns-updater.py -c your_config.cfg
 ```
 
 ## Configuration
